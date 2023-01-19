@@ -1,0 +1,59 @@
+console.log("Hello typescript!");
+// arrow function
+let test = (a:number = 5, b:number = 6) =>{
+    console.log(a*b);
+}
+test()
+
+let test2 = (a:number = 5, b:number = 6) =>{
+    console.log(a*b);
+}
+test2(2,3)
+
+// I didn't declared the type of the value in this array
+const array = []
+array.push(1)
+array.push("Hello World!")
+array.push(true)
+array.push({name:"John", age: 20})
+array.push(()=>{console.log("Hello World!")})
+console.log(array);
+
+// typed array
+const array2: number[] = [];
+array2.push(1)
+array2.push(2)
+
+console.log(array2);
+
+// typed array
+const array3: (number | string)[] = [];
+array3.push(1)
+array3.push("Hello World!")
+
+console.log(array3);
+
+// typed array
+const array4: (number | string | boolean)[] = [];
+array4.push(1)
+array4.push("Hello World!")
+array4.push(true)
+
+console.log(array4);
+
+// typed array
+const array5: (number | string | boolean | object)[] = [];
+array5.push(1)
+array5.push("Hello World!")
+array5.push(true)
+array5.push({name:"John", age: 20})
+
+console.log(array5);
+
+// typed array
+const array6: (number | string | boolean | object | Function)[] = [];
+array6.push(1)
+array6.push("Hello World!")
+array6.push(true)
+array6.push({name:"John", age: 20})
+array6.push(()=>{console.log("Hello World!")})
