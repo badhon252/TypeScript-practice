@@ -74,8 +74,6 @@ console.log(customerLists);
 
 // console.log(customerLists.map((c)=>c.name));
 
-//? clearing console
-console.clear();
 
 //!Inheritance
 class Person{
@@ -111,14 +109,12 @@ khalid1.customersOrder("Mobile phone", 1)
 
 customerLists1.push(khalid1);
 
-//? clearing console
-console.clear();
 
 //! Access Modifier
 class Person1{
-    readonly name:string;
-    private age:number;
-    public address:string;
+    name:string;
+    age:number;
+    address:string;
     constructor(n:string, a:number, addr:string){
         this.name = n;
         this.age = a;
@@ -129,42 +125,3 @@ class Person1{
          `)
     };
 }
-
-const Badhon = new Person1("Khalid Hossain", 22, "Bakergonj");
-console.log(Badhon);
-Badhon.personInfo();
-
-// Badhon.name = "Badhon Hossain Badhon"; //?Cannot assign to 'name' because it is a read-only property
-console.log(Badhon.name);
-
-// Badhon.age = 20; //?Property 'age' is private and only accessible within class 'Person1'.
-// console.log(Badhon.age); //?Property 'age' is private and only accessible within class 'Person1'.
-
-Badhon.address = "Barishal" //?Property 'address' is public, because of that we can exploit it easily.
-console.log(Badhon.address);
-
-//? clearing console
-console.clear();
-
-//! Access Modifier in Constructor
-class Person2{
-    constructor(public name:string, private age:number, public address:string){
-    };
-    personInfo(){
-        console.log(`Person name is ${this.name}and his age is ${this.age} and his address is ${this.address}
-         `)
-    };
-}
-
-const player = new Person2("Khalid Hossain", 22, "Bakergonj");
-console.log(player);
-player.personInfo();
-
-// player.name = "Badhon Hossain Badhon"; //?Cannot assign to 'name' because it is a read-only property
-console.log(player.name);
-
-// player.age = 20; //?Property 'age' is private and only accessible within class 'Person1'.
-// console.log(player.age); //?Property 'age' is private and only accessible within class 'Person1'.
-
-player.address = "Barishal" //?Property 'address' is public, because of that we can exploit it easily.
-console.log(player.address);
