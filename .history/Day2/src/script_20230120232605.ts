@@ -83,5 +83,4 @@ function add5(a:number, b:number, cb:(num:number)=>void):void{
 
 add5(1,2, (result)=>{
     console.log(result);
-})
-
+}

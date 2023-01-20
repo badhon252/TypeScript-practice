@@ -33,10 +33,10 @@ console.log(customer1);
 
 
 //? function overloading
-// function add(a:number, b:number):number;
-// function add(a:string, b:string):string;
-// function add(a:string, b:string, c:string):string;
+function add(a:number, b:number):number;
+function add(a:string, b:string):string;
 function add(a:number, b:number, c:number):number;
+function add(a:string, b:string, c:string):string;
 function add(a:any, b:any, c?:any):any{
     if(c){
         return a+b+c;
@@ -55,33 +55,3 @@ function add2(a:number, b:number, c?:number):number{
 }
 
 console.log(add2(1,2,5));
-
-//? default parameter  
-function add3(a:number, b:number, c:number = 0):number{
-    return a+b+c;
-}
-
-console.log(add3(1,2,5));
-
-//? rest parameter
-function add4(...a:number[]):number{
-    let total = 0;
-    console.log(a)
-    a.forEach((item)=>{
-        total+=item;
-    })
-    return total;
-}
-
-console.log(add4(1,2,5,6,7,8,9,10));
-
-//? function callback
-function add5(a:number, b:number, cb:(num:number)=>void):void{
-    const result = a+b;
-    cb(result);
-}
-
-add5(1,2, (result)=>{
-    console.log(result);
-})
-

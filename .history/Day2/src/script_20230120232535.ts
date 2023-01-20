@@ -74,14 +74,3 @@ function add4(...a:number[]):number{
 }
 
 console.log(add4(1,2,5,6,7,8,9,10));
-
-//? function callback
-function add5(a:number, b:number, cb:(num:number)=>void):void{
-    const result = a+b;
-    cb(result);
-}
-
-add5(1,2, (result)=>{
-    console.log(result);
-})
-
