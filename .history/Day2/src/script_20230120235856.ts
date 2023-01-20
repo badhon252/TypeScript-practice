@@ -24,11 +24,11 @@ const user1 = userInfo({name:"Khalid Hossain", age:22}, "193-011-011");
 //! function signature 
 let customer : (user:user, id:StringOrNumber, product:string) => object;
 
-customer = (user, id, productName) =>{
+Customer = (user, id, productName) =>{
     return {user, id, productName};
 }
 
-const customer1 = customer({name:"Khalid Hossain", age:22}, 193011011, "Laptop")
+const customer1 = Customer({name:"Khalid Hossain", age:22}, 193011011, "Laptop")
 console.log(customer1);
 
 

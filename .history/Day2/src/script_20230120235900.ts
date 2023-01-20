@@ -28,7 +28,7 @@ customer = (user, id, productName) =>{
     return {user, id, productName};
 }
 
-const customer1 = customer({name:"Khalid Hossain", age:22}, 193011011, "Laptop")
+const customer1 = Customer({name:"Khalid Hossain", age:22}, 193011011, "Laptop")
 console.log(customer1);
 
 

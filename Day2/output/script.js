@@ -10,11 +10,11 @@ const userInfo = (user, id) => {
 const user1 = userInfo({ name: "Khalid Hossain", age: 22 }, "193-011-011");
 // console.table(user1);
 //! function signature 
-let Customer;
-Customer = (user, id, productName) => {
+let customer;
+customer = (user, id, productName) => {
     return { user, id, productName };
 };
-const customer1 = Customer({ name: "Khalid Hossain", age: 22 }, 193011011, "Laptop");
+const customer1 = customer({ name: "Khalid Hossain", age: 22 }, 193011011, "Laptop");
 console.log(customer1);
 function add(a, b, c) {
     if (c) {
